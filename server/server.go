@@ -145,7 +145,7 @@ func (s *Server) Run(version string) error {
 	}
 	if s.Open {
 		openhost := host
-		if openhost == "localhost" {
+		if openhost == "0.0.0.0" {
 			openhost = "localhost"
 		}
 		go func() {
