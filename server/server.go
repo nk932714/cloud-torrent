@@ -136,7 +136,7 @@ func (s *Server) Run(version string) error {
 
 	host := s.Host
 	if host == "" {
-		host = "0.0.0.0"
+		host = "localhost"
 	}
 	addr := fmt.Sprintf("%s:%d", host, s.Port)
 	proto := "http"
@@ -145,7 +145,7 @@ func (s *Server) Run(version string) error {
 	}
 	if s.Open {
 		openhost := host
-		if openhost == "0.0.0.0" {
+		if openhost == "localhost" {
 			openhost = "localhost"
 		}
 		go func() {
